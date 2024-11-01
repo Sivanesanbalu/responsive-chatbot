@@ -1,0 +1,152 @@
+/* Base styling */
+* {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/Users/sivanesanbalu/Desktop/gemini_project/frist-gen/public/img01.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+/* Title styling */
+.title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* App container */
+.app {
+  width: 90vw;
+  max-width: 900px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 30px;
+}
+
+/* Chat prompt section */
+p {
+  font-size: 22px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+/* Ask Me button */
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  position: relative; /* Change to relative */
+  bottom: 0; /* Position it at the bottom of the app container */
+}
+
+.input-container input {
+  flex: 1;
+  padding: 12px; /* Reduced padding */
+  font-size: 16px; /* Reduced font size */
+  border: none;
+  outline: none;
+  background: none;
+  color: #100d0d;
+  width: 300px; /* Set a fixed width */
+  min-width: 200px; /* Minimum width to prevent shrinkage */
+}
+
+.input-container button {
+  width: 80px; /* Adjusted button width */
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px; /* Reduced font size */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.input-container button:hover {
+  background-color: #45A049;
+}
+
+/* Chat history styling */
+.search-result {
+  margin-top: 15px;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answer {
+  padding: 16px 24px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.answer:hover {
+  transform: scale(1.02);
+}
+
+/* User message styles */
+.answer.user {
+  background-color: #131111;
+  border-left: 5px solid #7f4faf;
+  color: #ffffff;
+}
+
+/* Model message styles */
+.answer.model {
+  background-color: #e6f7ff;
+  border-left: 5px solid #4A90E2;
+}
+
+/* Error message styling */
+.error {
+  color: #e74c3c;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+  .app {
+    width: 95vw;
+    height: 90vh;
+  }
+
+  .input-container button {
+    font-size: 16px;
+  }
+
+  .answer {
+    font-size: 16px;
+  }
+}
